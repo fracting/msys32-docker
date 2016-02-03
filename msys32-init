@@ -35,5 +35,6 @@ else
     msys32 -c pacman -S --needed --noconfirm base-devel msys2-devel mingw-w64-i686-toolchain git subversion || true
     msys32 -c pacman -S --needed --noconfirm base-devel msys2-devel mingw-w64-i686-toolchain git subversion || true
     msys32 -c pacman -S --needed --noconfirm base-devel msys2-devel mingw-w64-i686-toolchain git subversion
+    msys32 -c rm -rf /var/cache/pacman/pkg/*
     popd
 fi
