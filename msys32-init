@@ -16,6 +16,7 @@ else
     pushd ~/.wine/drive_c
     wget http://54.201.206.112/msys2/distrib/i686/msys2-base-i686-20150916.tar.xz
     tar xf msys2-base-i686-20150916.tar.xz
+    rm msys2-base-i686-20150916.tar.xz
     msys32 -c echo Init MSYS2 done.
     echo "Server = http://54.201.206.112/msys2/mingw/i686" > ${MSYS_ROOT}/etc/pacman.d/mirrorlist.mingw32
     echo "Server = http://54.201.206.112/msys2/msys/\$arch" > ${MSYS_ROOT}/etc/pacman.d/mirrorlist.msys
