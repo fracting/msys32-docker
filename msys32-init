@@ -14,28 +14,24 @@ then
     echo Already Initialized. 
 else
     pushd ~/.wine/drive_c
-    wget http://repo.msys2.org/distrib/i686/msys2-base-i686-20150916.tar.xz
-    #wget http://mirror.bit.edu.cn/msys2/Base/i686/msys2-base-i686-20150916.tar.xz
+    wget http://54.201.206.112/msys2/distrib/i686/msys2-base-i686-20150916.tar.xz
     tar xf msys2-base-i686-20150916.tar.xz
     rm msys2-base-i686-20150916.tar.xz
     msys32 -c echo Init MSYS2 done.
-    #echo "Server = http://mirror.bit.edu.cn/msys2/REPOS/MINGW/i686" > ${MSYS_ROOT}/etc/pacman.d/mirrorlist.mingw32
-    #echo "Server = http://mirror.bit.edu.cn/msys2/REPOS/MINGW/i686" >> ${MSYS_ROOT}/etc/pacman.d/mirrorlist.mingw32
-    #echo "Server = http://mirror.bit.edu.cn/msys2/REPOS/MINGW/i686" >> ${MSYS_ROOT}/etc/pacman.d/mirrorlist.mingw32
-    #echo "Server = http://mirror.bit.edu.cn/msys2/REPOS/MINGW/x86_64" > ${MSYS_ROOT}/etc/pacman.d/mirrorlist.mingw64
-    #echo "Server = http://mirror.bit.edu.cn/msys2/REPOS/MINGW/x86_64" >> ${MSYS_ROOT}/etc/pacman.d/mirrorlist.mingw64
-    #echo "Server = http://mirror.bit.edu.cn/msys2/REPOS/MINGW/x86_64" >> ${MSYS_ROOT}/etc/pacman.d/mirrorlist.mingw64
-    #echo "Server = http://mirror.bit.edu.cn/msys2/REPOS/MSYS2/\$arch" > ${MSYS_ROOT}/etc/pacman.d/mirrorlist.msys
-    #echo "Server = http://mirror.bit.edu.cn/msys2/REPOS/MSYS2/\$arch" >> ${MSYS_ROOT}/etc/pacman.d/mirrorlist.msys
-    #echo "Server = http://mirror.bit.edu.cn/msys2/REPOS/MSYS2/\$arch" >> ${MSYS_ROOT}/etc/pacman.d/mirrorlist.msys
+    echo "Server = http://54.201.206.112/msys2/mingw/i686" > ${MSYS_ROOT}/etc/pacman.d/mirrorlist.mingw32
+    echo "Server = http://54.201.206.112/msys2/msys/\$arch" > ${MSYS_ROOT}/etc/pacman.d/mirrorlist.msys
     msys32 -c update-core || true
     msys32 -c update-core || true
     msys32 -c update-core || true
     msys32 -c update-core
+    echo "Server = http://54.201.206.112/msys2/mingw/i686" > ${MSYS_ROOT}/etc/pacman.d/mirrorlist.mingw32
+    echo "Server = http://54.201.206.112/msys2/msys/\$arch" > ${MSYS_ROOT}/etc/pacman.d/mirrorlist.msys
     msys32 -c pacman -Su --needed --noconfirm || true
     msys32 -c pacman -Su --needed --noconfirm || true
     msys32 -c pacman -Su --needed --noconfirm || true
     msys32 -c pacman -Su --needed --noconfirm
+    echo "Server = http://54.201.206.112/msys2/mingw/i686" > ${MSYS_ROOT}/etc/pacman.d/mirrorlist.mingw32
+    echo "Server = http://54.201.206.112/msys2/msys/\$arch" > ${MSYS_ROOT}/etc/pacman.d/mirrorlist.msys
     msys32 -c pacman -S --needed --noconfirm base-devel msys2-devel mingw-w64-i686-toolchain git subversion || true
     msys32 -c pacman -S --needed --noconfirm base-devel msys2-devel mingw-w64-i686-toolchain git subversion || true
     msys32 -c pacman -S --needed --noconfirm base-devel msys2-devel mingw-w64-i686-toolchain git subversion || true
