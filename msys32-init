@@ -10,7 +10,7 @@ WINEDEBUG=-all DISPLAY=:55.0 winetricks nocrashdialog; wineserver -w
 
 if test -d ${MSYS_ROOT}
 then
-    echo Already Initialized. 
+    echo Already Initialized.
 else
     pushd ~/.wine/drive_c
     wget http://repo.msys2.org/distrib/i686/msys2-base-i686-20160205.tar.xz -O msys2-base-i686-latest.tar.xz
@@ -26,7 +26,9 @@ else
     #echo "Server = http://mirror.bit.edu.cn/msys2/REPOS/MSYS2/\$arch" > ${MSYS_ROOT}/etc/pacman.d/mirrorlist.msys
     #echo "Server = http://mirror.bit.edu.cn/msys2/REPOS/MSYS2/\$arch" >> ${MSYS_ROOT}/etc/pacman.d/mirrorlist.msys
     #echo "Server = http://mirror.bit.edu.cn/msys2/REPOS/MSYS2/\$arch" >> ${MSYS_ROOT}/etc/pacman.d/mirrorlist.msys
-    msys32 -c update-core --noconfirm|| true
+    msys32 -c pacman -Sy --noconfirm pacman || true
+    msys32 -c pacman -Sy --noconfirm pacman
+    msys32 -c update-core --noconfirm || true
     msys32 -c update-core --noconfirm
     msys32 -c pacman -Su --needed --noconfirm || true
     msys32 -c pacman -Su --needed --noconfirm
