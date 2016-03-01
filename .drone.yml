@@ -22,7 +22,7 @@ publish:
     repo: fracting/msys32
     tag:
       - "latest"
-      - "w1.9.4-m2.4.1-daily20160226"
+      - "w1.9.4-m2.5.0-daily20160331"
     when:
       repo: fracting/msys32-docker
       branch: testing
