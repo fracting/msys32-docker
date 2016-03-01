@@ -26,8 +26,8 @@ else
     #echo "Server = http://mirror.bit.edu.cn/msys2/REPOS/MSYS2/\$arch" > ${MSYS_ROOT}/etc/pacman.d/mirrorlist.msys
     #echo "Server = http://mirror.bit.edu.cn/msys2/REPOS/MSYS2/\$arch" >> ${MSYS_ROOT}/etc/pacman.d/mirrorlist.msys
     #echo "Server = http://mirror.bit.edu.cn/msys2/REPOS/MSYS2/\$arch" >> ${MSYS_ROOT}/etc/pacman.d/mirrorlist.msys
-    msys32 -c update-core || true
-    msys32 -c update-core
+    msys32 -c update-core --noconfirm|| true
+    msys32 -c update-core --noconfirm
     msys32 -c pacman -Su --needed --noconfirm || true
     msys32 -c pacman -Su --needed --noconfirm
     msys32 -c pacman -S --needed --noconfirm base-devel msys2-devel mingw-w64-i686-toolchain git subversion || true
