@@ -35,8 +35,7 @@ publish:
     email: $$DOCKER_EMAIL
     repo: teaci/msys32 # dockerhub repo, don't confused with github repo.
     tag:
-      - "latest"
-      - "w1.9.6-m2.5.0-7"
+      - "r20160401"
     when:
       repo: TeaCI/msys32-docker # case sensitive
       branch: release # only build latest tag in release branch.
