@@ -19,7 +19,7 @@ publish:
     email: $$DOCKER_EMAIL
     repo: teaci/msys32
     tag:
-      - "w1.9.5-m2.5.0-7"
+      - "20160401"
     when:
       repo: fracting/msys32-docker
       branch: master

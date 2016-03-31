@@ -28,14 +28,14 @@ else
     rm msys2-base-i686-*.tar.xz
     msys32 -c echo Init MSYS2 done.
 
-    echo "Server = https://mirrors.tea-ci.org/msys2/mingw/i686" > ${MSYS_ROOT}/etc/pacman.d/mirrorlist.mingw32
-    echo "Server = https://mirrors.tea-ci.org/msys2/mingw/i686" >> ${MSYS_ROOT}/etc/pacman.d/mirrorlist.mingw32
+#    echo "Server = https://mirrors.tea-ci.org/msys2/mingw/i686" > ${MSYS_ROOT}/etc/pacman.d/mirrorlist.mingw32
+#    echo "Server = https://mirrors.tea-ci.org/msys2/mingw/i686" >> ${MSYS_ROOT}/etc/pacman.d/mirrorlist.mingw32
 
-    echo "Server = https://mirrors.tea-ci.org/msys2/mingw/x86_64" > ${MSYS_ROOT}/etc/pacman.d/mirrorlist.mingw64
-    echo "Server = https://mirrors.tea-ci.org/msys2/mingw/x86_64" >> ${MSYS_ROOT}/etc/pacman.d/mirrorlist.mingw64
+#    echo "Server = https://mirrors.tea-ci.org/msys2/mingw/x86_64" > ${MSYS_ROOT}/etc/pacman.d/mirrorlist.mingw64
+#    echo "Server = https://mirrors.tea-ci.org/msys2/mingw/x86_64" >> ${MSYS_ROOT}/etc/pacman.d/mirrorlist.mingw64
 
-    echo "Server = https://mirrors.tea-ci.org/msys2/msys/i686" > ${MSYS_ROOT}/etc/pacman.d/mirrorlist.msys
-    echo "Server = https://mirrors.tea-ci.org/msys2/msys/i686" >> ${MSYS_ROOT}/etc/pacman.d/mirrorlist.msys
+#    echo "Server = https://mirrors.tea-ci.org/msys2/msys/i686" > ${MSYS_ROOT}/etc/pacman.d/mirrorlist.msys
+#    echo "Server = https://mirrors.tea-ci.org/msys2/msys/i686" >> ${MSYS_ROOT}/etc/pacman.d/mirrorlist.msys
 
     popd > /dev/null
 fi
