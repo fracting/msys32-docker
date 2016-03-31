@@ -13,8 +13,8 @@ COPY mingw32 /usr/bin/
 COPY mingw64 /usr/bin/
 RUN msys32-init
 RUN msys32 -c pacman -Sy --noconfirm --noprogressbar pacman mintty
-RUN msys32 -c "pacman -Su --needed --noconfirm --noprogressbar"
-RUN msys32 -c "pacman -Su --needed --noconfirm --noprogressbar && pacman -Scc --noconfirm"
+RUN msys32 -c "pacman -Suu --needed --noconfirm --noprogressbar"
+RUN msys32 -c "pacman -Suu --needed --noconfirm --noprogressbar && pacman -Scc --noconfirm"
 RUN msys32 -c "pacman -S --needed --noconfirm --noprogressbar base-devel &&  pacman -Scc --noconfirm"
 RUN msys32 -c "pacman -S --needed --noconfirm --noprogressbar msys2-devel && pacman -Scc --noconfirm"
 RUN msys32 -c "pacman -S --needed --noconfirm --noprogressbar mingw-w64-i686-toolchain && pacman -Scc --noconfirm"
