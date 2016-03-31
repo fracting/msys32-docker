@@ -1,5 +1,5 @@
 build:
-  image: teaci/msys32:testing
+  image: teaci/msys32:20160401
   shell: msys32
   pull: true
   commands:
